@@ -17,8 +17,8 @@ module.exports = {
     entry:{
         t2 : "./assets/js/other.js",
         t1 : "./assets/js/test.js"
-    }
-    ,
+    },
+
     //插件项
     plugins : [
         //提取公共模块到common.js
