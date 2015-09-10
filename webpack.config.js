@@ -10,6 +10,8 @@ var webpack = require('webpack');
 var appRoot = path.join(__dirname, 'app');
 var nodeRoot = path.join(__dirname, 'node_modules');
 
+console.log("Running " + _DEV + " build");
+
 
 var  PATH_CONS = {
     BIZ : "./src/js/"
@@ -32,7 +34,6 @@ module.exports = {
 
         test : PATH_CONS.BIZ+"test.js",
         user : PATH_CONS.BIZ+"user.js",
-
 
 
 
