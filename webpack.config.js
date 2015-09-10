@@ -15,10 +15,8 @@ var  PATH_CONS = {
     BIZ : "./src/js/"
 }
 
-
 //公共模块提取插件
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
-
 
 module.exports = {
 
@@ -26,7 +24,9 @@ module.exports = {
     //根据filename的[name]值 会打包多个文件
     entry: {
 
-        t1 : PATH_CONS.BIZ+"test.js",
+        test : PATH_CONS.BIZ+"test.js",
+        user : PATH_CONS.BIZ+"user.js",
+
         //类库
         vendor: [
             "./lib/jquery/dist/jquery.min.js"
