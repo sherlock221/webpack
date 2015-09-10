@@ -3,6 +3,6 @@
  * test
  */
 
-
+var temp  = require("artTemplate");
 
 console.log("user...");

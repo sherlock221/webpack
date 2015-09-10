@@ -7,8 +7,10 @@ webpackJsonp([0],[
 	 * test
 	 */
 	
-
+	var temp  = __webpack_require__(4);
+	
 	console.log("user...");
+
 
 /***/ }
 ]);

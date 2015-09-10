@@ -1,4 +1,4 @@
-webpackJsonp([1],[
+webpackJsonp([2],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -10,7 +10,12 @@ webpackJsonp([1],[
 	
 	var hello = __webpack_require__(2);
 	
-	console.log(hello);
+	//template
+	var temp  = __webpack_require__(4);
+	
+	
+	console.log(temp);
+
 
 /***/ },
 /* 1 */,

@@ -6,4 +6,8 @@
 
 var hello = require("./hello");
 
-console.log(hello);
+//template
+var temp  = require("artTemplate");
+
+
+console.log(temp);

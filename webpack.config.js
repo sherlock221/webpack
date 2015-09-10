@@ -18,7 +18,13 @@ var  PATH_CONS = {
 //公共模块提取插件
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 
+
 module.exports = {
+
+
+    //开发模式
+    devtool: 'source-map',
+    debug: true,
 
     //页面入口文件
     //根据filename的[name]值 会打包多个文件
@@ -27,26 +33,25 @@ module.exports = {
         test : PATH_CONS.BIZ+"test.js",
         user : PATH_CONS.BIZ+"user.js",
 
-        //类库
+
+        //全局类库
         vendor: [
             "./lib/jquery/dist/jquery.min.js"
         ]
     },
-    //开发模式
-    devtool: 'source-map',
-    debug: true,
 
     //插件项
     plugins: [
 
         //提取公共模块到common.js
-        new CommonsChunkPlugin('vendor', "common.js"),
+        new CommonsChunkPlugin("common.js",["test","user"]),
 
         //这个可以使jquery变成全局变量，妮不用在自己文件require('jquery')了
         new webpack.ProvidePlugin({
             $: 'jquery'
         }),
     ],
+
     //输出文件配置
     output: {
         //打包文件存放的绝对路径
