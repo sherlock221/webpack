@@ -3,7 +3,18 @@
  * webpack 配置文件
  */
 
+var path = require('path');
 var webpack = require('webpack');
+
+
+var appRoot = path.join(__dirname, 'app');
+var nodeRoot = path.join(__dirname, 'node_modules');
+
+
+var  PATH_CONS = {
+    BIZ : "./src/js/"
+}
+
 
 //公共模块提取插件
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
@@ -14,16 +25,16 @@ module.exports = {
     //页面入口文件
     //根据filename的[name]值 会打包多个文件
     entry: {
-        t2: "./assets/js/test.js",
 
+        t1 : PATH_CONS.BIZ+"test.js",
         //类库
         vendor: [
             "./lib/jquery/dist/jquery.min.js"
         ]
     },
-
     //开发模式
     devtool: 'source-map',
+    debug: true,
 
     //插件项
     plugins: [
@@ -39,11 +50,11 @@ module.exports = {
     //输出文件配置
     output: {
         //打包文件存放的绝对路径
-        path: __dirname + '/assets/',
+        path: __dirname + '/dist/',
         //网站运行时的访问路径
-        publicPath: "/assets/",
+        publicPath: "/src/",
         //打包后的文件名
-        filename: 'bundle.js'
+        filename: '[name].biz.js'
     },
 
     module : {
@@ -61,7 +72,6 @@ module.exports = {
 
         ]
     },
-
 
     resolve: {
 
