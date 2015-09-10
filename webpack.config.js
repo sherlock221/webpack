@@ -34,6 +34,8 @@ module.exports = {
         user : PATH_CONS.BIZ+"user.js",
 
 
+
+
         //全局类库
         vendor: [
             "./lib/jquery/dist/jquery.min.js"
